@@ -56,8 +56,9 @@ rails g simple_form:install  --bootstrap
 <li>>gem install eventmachine -v '1.0.3' -- --with-cppflags=-I/usr/local/opt/openssl/include</li>
 
 <h2>Git Repo</h2>
-<tt>
+
 <pre>
+<tt>
 git status
 ee .gitignore
 git add .
@@ -66,5 +67,5 @@ git remote add origin git@github.com:brian915/book-kibbutz.git
 git remote
 git push origin master
 git push -u origin maste
-</pre>
 </tt>
+</pre>
