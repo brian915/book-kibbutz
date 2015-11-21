@@ -27,19 +27,20 @@ Things you may want to cover:
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
 
-<h1> Book Kibbutz</h1>
-<h2>Versions</h2>
-<ul>
-<li>ruby
-<li>rails
-<li>rails composer
-</ul>
+== Book Kibbutz
+<tt>
+Versions:
 
-<h2>Composer Options</h2>
+ruby
+rails
+rails composer
 
-<h2>Database</h2>
 
-<h2>Theme</h2>
+Composer Options:
+
+Database:
+
+Theme:
 <pre>
 rails g simple_form:install  --bootstrap
   Be sure to have a copy of the Bootstrap stylesheet available on your
@@ -51,14 +52,14 @@ rails g simple_form:install  --bootstrap
     = simple_form_for(@user, html: { class: 'form-horizontal' }) do |form|
 </pre>
 
-<h2>Specific Steps for Local Install</h2>
-<ul>
-<li>>gem install eventmachine -v '1.0.3' -- --with-cppflags=-I/usr/local/opt/openssl/include</li>
+Specific Steps for Local Install:
 
-<h2>Git Repo</h2>
+gem install eventmachine -v '1.0.3' -- --with-cppflags=-I/usr/local/opt/openssl/include
+
+Git Repo:
 
 <pre>
-<tt>
+
 git status
 ee .gitignore
 git add .
@@ -67,5 +68,5 @@ git remote add origin git@github.com:brian915/book-kibbutz.git
 git remote
 git push origin master
 git push -u origin maste
-</tt>
+
 </pre>
