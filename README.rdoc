@@ -40,6 +40,20 @@ Composer Options:
 
 Database:
 
+createdb -U book_kibbutz -W  book_kibbutz_development
+createdb -U book_kibbutz -W  book_kibbutz_test
+psql
+rake db:migrate 
+
+rails c
+b = Book.all
+quit
+
+ee config/database.yml
+rails generate rspec:install
+rake
+
+
 Theme:
 <pre>
 rails g simple_form:install  --bootstrap
