@@ -13,7 +13,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 gem 'responders', '~> 2.0'
-gem 'devise'
 
 gem 'bootstrap-sass'
 gem 'high_voltage'
@@ -23,8 +22,6 @@ gem 'pg'
 gem 'pundit'
 gem 'simple_form'
 gem 'thin'
-
-gem 'puma'
 
 group :development, :test do
   gem 'byebug'
