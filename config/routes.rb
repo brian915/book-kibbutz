@@ -19,11 +19,8 @@ Rails.application.routes.draw do
   get '/signout' => 'sessions#destroy', :as => :signout
   get '/auth/failure' => 'sessions#failure'
 
-
   resources :books
   root 'pages#index'
-
-
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
