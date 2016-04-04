@@ -1,11 +1,9 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+***https://tutorials.railsapps.org/tutorials/rails-devise-roles***
 
 Things you may want to cover:
 
-* Ruby version
 
 * System dependencies
 
@@ -28,14 +26,13 @@ Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
 
 == Book Kibbutz
-<tt>
+
 Versions:
 
-ruby
-rails
+* Ruby 2.2.3
+* Rails 4.25
+
 rails composer
-
-
 Composer Options:
 
 Database:
@@ -71,9 +68,7 @@ Specific Steps for Local Install:
 gem install eventmachine -v '1.0.3' -- --with-cppflags=-I/usr/local/opt/openssl/include
 
 Git Repo:
-
 <pre>
-
 git status
 ee .gitignore
 git add .
@@ -81,6 +76,9 @@ git commit -m 'initial commit'
 git remote add origin git@github.com:brian915/book-kibbutz.git
 git remote
 git push origin master
-git push -u origin maste
-
+git push -u origin master
 </pre>
+
+
+
+
