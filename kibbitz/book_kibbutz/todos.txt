@@ -60,3 +60,46 @@ Some setup you must do manually if you haven't yet:
        rails g devise:views
 
 ===============================================================================
+
+ create    db/migrate/20160409194945_devise_create_users.rb
+      create    app/models/user.rb
+      invoke    rspec
+      create      spec/models/user_spec.rb
+      invoke      factory_girl
+      create        spec/factories/users.rb
+      insert    app/models/user.rb
+       route  devise_for :users
+    generate    migration AddNameToUsers name:string
+      invoke  active_record
+      create    db/migrate/20160409194949_add_name_to_users.rb
+        gsub    app/models/user.rb
+    generate    migration AddConfirmableToUsers confirmation_token:string confirmed_at:datetime confirmation_sent_at:datetime unconfirmed_email:string
+      invoke  active_record
+      create    db/migrate/20160409194953_add_confirmable_to_users.rb
+         run    bundle exec rake db:migrate from "."
+== 20160409194945 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+   -> 0.0617s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.0033s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.0036s
+== 20160409194945 DeviseCreateUsers: migrated (0.0694s) =======================
+
+== 20160409194949 AddNameToUsers: migrating ===================================
+-- add_column(:users, :name, :string)
+   -> 0.0151s
+== 20160409194949 AddNameToUsers: migrated (0.0152s) ==========================
+
+== 20160409194953 AddConfirmableToUsers: migrating ============================
+-- add_column(:users, :confirmation_token, :string)
+   -> 0.0015s
+-- add_column(:users, :confirmed_at, :datetime)
+   -> 0.0011s
+-- add_column(:users, :confirmation_sent_at, :datetime)
+   -> 0.0010s
+-- add_column(:users, :unconfirmed_email, :string)
+   -> 0.0013s
+== 20160409194953 AddConfirmableToUsers: migrated (0.0053s) ===================
+
+
