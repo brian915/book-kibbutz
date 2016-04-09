@@ -1,0 +1,163 @@
+NEXT STEPS : 
+
+    ~ read pundit info
+    ~ add books
+    ~ add authors
+    ~ add in administrative access
+    ~ create a public/index/root page to display the book of the month
+    ~ add flag for featured book(s)
+    ~ add social media sites 
+    ~ add an "about" page 
+    
+    ~ learn to use Guard
+    ~ learn Zeus / Spring
+    ~ test coverage for the entire app 
+    
+    ~ styles / Anyar
+    ~ email
+    ~ Google Analytics 
+    ~ Twitter
+    ~ Facebook Group 
+    
+    ~ Devise & Pundit permissions and methods 
+    
+
+
+
+
+https://github.com/rails/spring - do I need to do anything for this?
+http://girders.org/blog/2014/02/06/setup-rails-41-spring-rspec-and-guard/
+
+read the Pundit & Devise tutorials and instructions
+
+setup email and twitter and facebook page
+
+ominauth signin - twitter ? think on this 
+
+google analytics id 
+
+
+document this mess once I fix database : 
+
+    run    createuser --createdb bk from "."
+        gsub    config/database.yml
+        gsub    config/database.yml
+        gsub    config/database.yml
+        gsub    config/database.yml
+      option  Okay to drop all existing databases named bk? 'No' will abort immediately! (y/n) y
+         run    bundle exec rake db:drop from ".
+         
+also , the testing mess : 
+
+run    bundle exec guard init from "."
+
+
+and the devise mess : 
+
+Some setup you must do manually if you haven't yet:
+
+  1. Ensure you have defined default url options in your environments files. Here
+     is an example of default_url_options appropriate for a development environment
+     in config/environments/development.rb:
+
+       config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+     In production, :host should be set to the actual host of your application.
+
+  2. Ensure you have defined root_url to *something* in your config/routes.rb.
+     For example:
+
+       root to: "home#index"
+
+  3. Ensure you have flash messages in app/views/layouts/application.html.erb.
+     For example:
+
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+  4. If you are deploying on Heroku with Rails 3.2 only, you may want to set:
+
+       config.assets.initialize_on_precompile = false
+
+     On config/application.rb forcing your application to not access the DB
+     or load models when precompiling your assets.
+
+  5. You can copy Devise views (for customization) to your app by running:
+
+       rails g devise:views
+
+===============================================================================
+
+ create    db/migrate/20160409194945_devise_create_users.rb
+      create    app/models/user.rb
+      invoke    rspec
+      create      spec/models/user_spec.rb
+      invoke      factory_girl
+      create        spec/factories/users.rb
+      insert    app/models/user.rb
+       route  devise_for :users
+    generate    migration AddNameToUsers name:string
+      invoke  active_record
+      create    db/migrate/20160409194949_add_name_to_users.rb
+        gsub    app/models/user.rb
+    generate    migration AddConfirmableToUsers confirmation_token:string confirmed_at:datetime confirmation_sent_at:datetime unconfirmed_email:string
+      invoke  active_record
+      create    db/migrate/20160409194953_add_confirmable_to_users.rb
+         run    bundle exec rake db:migrate from "."
+== 20160409194945 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+   -> 0.0617s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.0033s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.0036s
+== 20160409194945 DeviseCreateUsers: migrated (0.0694s) =======================
+
+== 20160409194949 AddNameToUsers: migrating ===================================
+-- add_column(:users, :name, :string)
+   -> 0.0151s
+== 20160409194949 AddNameToUsers: migrated (0.0152s) ==========================
+
+== 20160409194953 AddConfirmableToUsers: migrating ============================
+-- add_column(:users, :confirmation_token, :string)
+   -> 0.0015s
+-- add_column(:users, :confirmed_at, :datetime)
+   -> 0.0011s
+-- add_column(:users, :confirmation_sent_at, :datetime)
+   -> 0.0010s
+-- add_column(:users, :unconfirmed_email, :string)
+   -> 0.0013s
+== 20160409194953 AddConfirmableToUsers: migrated (0.0053s) ===================
+
+and Heroku mess : 
+
+deployment
+  deployment  recipe stage three
+  deployment  precompiling assets for Heroku
+         run    RAILS_ENV=production rake assets:precompile from "."
+rake aborted!
+TypeError: no implicit conversion of nil into String
+/Users/bri_an_I_cloud/Dropbox/websites/code/ruby/bk/config/initializers/devise.rb:15:in `+'
+/Users/bri_an_I_cloud/Dropbox/websites/code/ruby/bk/config/initializers/devise.rb:15:in `block in <top (required)>'
+/Users/bri_an_I_cloud/Dropbox/websites/code/ruby/bk/config/initializers/devise.rb:3:in `<top (required)>'
+/Users/bri_an_I_cloud/Dropbox/websites/code/ruby/bk/config/environment.rb:5:in `<top (required)>'
+Tasks: TOP => environment
+(See full trace by running task with --trace)
+  deployment  creating app.json file for Heroku Button
+      create    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+        gsub    app.json
+deployment
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: prepare for deployment" from "."

@@ -1,50 +1,101 @@
-Bk
-================
+##README
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
+based upon : 
 
-Rails Composer is supported by developers who purchase our RailsApps tutorials.
+***
 
-Problems? Issues?
------------
+and perhaps : 
+***https://tutorials.railsapps.org/tutorials/rails-devise-roles***
 
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
+using :
 
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
+* Pundit 1.1.0
+* Devise 3.5.6
+* Rails 4.2.6
+* Ruby 2.3
 
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
+Rails Composer Options : 
 
-Ruby on Rails
--------------
 
-This application requires:
+Things you may want to cover:
 
-- Ruby 2.3.0
-- Rails 4.2.6
 
-Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
+* System dependencies
 
-Getting Started
----------------
+* Configuration
 
-Documentation and Support
--------------------------
+* Database creation
 
-Issues
--------------
+* Database initialization
 
-Similar Projects
-----------------
+* How to run the test suite
 
-Contributing
-------------
+* Services (job queues, cache servers, search engines, etc.)
 
-Credits
--------
+* Deployment instructions
 
-License
--------
+* ...
+
+
+
+
+## Book Kibbutz
+
+
+###Database:
+
+```bash
+createdb -U book_kibbutz -W  book_kibbutz_development
+createdb -U book_kibbutz -W  book_kibbutz_test
+psql
+rake db:migrate 
+
+rails c
+```
+```ruby
+b = Book.all
+quit
+```
+```bash
+ee config/database.yml
+rails generate rspec:install
+rake
+```
+
+
+###Theme:
+
+```bash
+rails g simple_form:install  --bootstrap
+```
+  Be sure to have a copy of the Bootstrap stylesheet available on your
+    application, you can get it on http://getbootstrap.com/.
+
+  Inside your views, use the 'simple_form_for' with one of the Bootstrap form
+    classes, '.form-horizontal' or '.form-inline', as the following:
+
+```ruby
+simple_form_for(@user, html: { class: 'form-horizontal' }) do |form|
+```
+
+###Specific Steps for Local Install:
+
+still required ? 
+***gem install eventmachine -v '1.0.3' -- --with-cppflags=-I/usr/local/opt/openssl/include***
+
+###Git Repo:
+
+* git status
+* ee .gitignore
+* git add .
+* git commit -m 'initial commit'
+* git remote add origin git@github.com:brian915/book-kibbutz.git
+* git remote
+* git push origin master
+* git push -u origin master
+
+
+
+
+

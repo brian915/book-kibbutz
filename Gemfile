@@ -7,21 +7,16 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-group :development, :test do
-  gem 'byebug'
-end
-group :development do
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
-end
+
 gem 'administrate'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'devise_invitable'
 gem 'high_voltage'
 gem 'pg'
-gem 'pundit'
+gem 'pundit', '1.1.0'
 gem 'simple_form'
+
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
@@ -33,20 +28,23 @@ group :development do
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
   gem 'spring-commands-rspec'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
 end
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
   gem 'thin'
-end
-group :production do
-  gem 'puma'
-  gem 'rails_12factor'
+  gem 'byebug'
 end
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
+end
+group :production do
+  gem 'puma'
+  gem 'rails_12factor'
 end

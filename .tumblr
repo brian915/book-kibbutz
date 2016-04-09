@@ -1,0 +1,17 @@
+# .tumblr file in your home directory. 
+# four lines:
+# consumer_key: "your_consumer_key"
+# consumer_secret: "your_consumer_secret"
+# oauth_token: "your_access_token"
+# oauth_token_secret: "your_access_token_secret"
+
+#OAuth Consumer key: ifYbVT6OvxFPe8HXkQSehGxMSAdNoY7fIpcxSi6Af9jeO3fYAH
+#OAuth Consumer secret: 2AEG2QrkvMXYiIh323RtaZtOvMGCBG79aeCI1s5BxoR9Kw8mtn
+#oauth_token=3YAeTvcWno4mFRlzHfYpzfihQW8q2etHD6oQCQH9hkoABkEgXj
+#oauth_verifier=CsQbfXeNkIVpVgA6WLTIwiJcNfEdiEBzfawkxEB90PGA5sb4CB
+
+
+consumer_key: "ifYbVT6OvxFPe8HXkQSehGxMSAdNoY7fIpcxSi6Af9jeO3fYAH"
+consumer_secret: "2AEG2QrkvMXYiIh323RtaZtOvMGCBG79aeCI1s5BxoR9Kw8mtn"
+oauth_token: "3YAeTvcWno4mFRlzHfYpzfihQW8q2etHD6oQCQH9hkoABkEgXj"
+oauth_verifier: "CsQbfXeNkIVpVgA6WLTIwiJcNfEdiEBzfawkxEB90PGA5sb4CB"
