@@ -1,0 +1,9 @@
+https://github.com/rails/spring - do I need to do anything for this?
+http://girders.org/blog/2014/02/06/setup-rails-41-spring-rspec-and-guard/
+
+read the Pundit & Devise tutorials and instructions
+
+FIX THE LAYOUT PROBLEM 
+
+setup email and twitter and facebook page
+
