@@ -102,4 +102,35 @@ Some setup you must do manually if you haven't yet:
    -> 0.0013s
 == 20160409194953 AddConfirmableToUsers: migrated (0.0053s) ===================
 
+and Heroku mess : 
 
+deployment
+  deployment  recipe stage three
+  deployment  precompiling assets for Heroku
+         run    RAILS_ENV=production rake assets:precompile from "."
+rake aborted!
+TypeError: no implicit conversion of nil into String
+/Users/bri_an_I_cloud/Dropbox/websites/code/ruby/bk/config/initializers/devise.rb:15:in `+'
+/Users/bri_an_I_cloud/Dropbox/websites/code/ruby/bk/config/initializers/devise.rb:15:in `block in <top (required)>'
+/Users/bri_an_I_cloud/Dropbox/websites/code/ruby/bk/config/initializers/devise.rb:3:in `<top (required)>'
+/Users/bri_an_I_cloud/Dropbox/websites/code/ruby/bk/config/environment.rb:5:in `<top (required)>'
+Tasks: TOP => environment
+(See full trace by running task with --trace)
+  deployment  creating app.json file for Heroku Button
+      create    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+      append    app.json
+        gsub    app.json
+deployment
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: prepare for deployment" from "."
