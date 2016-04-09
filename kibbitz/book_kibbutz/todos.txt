@@ -1,3 +1,30 @@
+NEXT STEPS : 
+
+    ~ read pundit info
+    ~ add books
+    ~ add authors
+    ~ add in administrative access
+    ~ create a public/index/root page to display the book of the month
+    ~ add flag for featured book(s)
+    ~ add social media sites 
+    ~ add an "about" page 
+    
+    ~ learn to use Guard
+    ~ learn Zeus / Spring
+    ~ test coverage for the entire app 
+    
+    ~ styles / Anyar
+    ~ email
+    ~ Google Analytics 
+    ~ Twitter
+    ~ Facebook Group 
+    
+    ~ Devise & Pundit permissions and methods 
+    
+
+
+
+
 https://github.com/rails/spring - do I need to do anything for this?
 http://girders.org/blog/2014/02/06/setup-rails-41-spring-rspec-and-guard/
 
