@@ -9,3 +9,13 @@ ominauth signin - twitter ? think on this
 
 google analytics id 
 
+
+document this mess once I fix database : 
+
+    run    createuser --createdb bk from "."
+        gsub    config/database.yml
+        gsub    config/database.yml
+        gsub    config/database.yml
+        gsub    config/database.yml
+      option  Okay to drop all existing databases named bk? 'No' will abort immediately! (y/n) y
+         run    bundle exec rake db:drop from ".
