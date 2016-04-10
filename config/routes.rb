@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :books
+  resources :authors
+  resources :books
   namespace :admin do
     resources :users
     root to: "users#index"

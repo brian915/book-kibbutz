@@ -15,7 +15,12 @@ using :
 * Rails 4.2.6
 * Ruby 2.3
 
-Rails Composer Options : 
+Rails Composer Options :
+
+PULL FROM YML ???
+
+###BOOKS:
+```rubyrails generate scaffold Book title:string isbn:decimal```
 
 
 Things you may want to cover:
@@ -46,8 +51,8 @@ Things you may want to cover:
 ###Database:
 
 ```bash
-createdb -U book_kibbutz -W  book_kibbutz_development
-createdb -U book_kibbutz -W  book_kibbutz_test
+createdb -U bk -W  bk_development
+createdb -U bk -W  bk_test
 psql
 rake db:migrate 
 
