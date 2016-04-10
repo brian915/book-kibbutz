@@ -15,6 +15,7 @@ NEXT STEPS :
     
     ~ styles / Anyar
     ~ Gmail
+    ~ remember rake figaro:heroku
     ~ Google Analytics 
     ~ Twitter
     ~ Facebook Group 
