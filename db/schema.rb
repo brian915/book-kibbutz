@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160410180122) do
+ActiveRecord::Schema.define(version: 20160410184134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,17 @@ ActiveRecord::Schema.define(version: 20160410180122) do
   end
 
   add_index "books", ["author_id"], name: "index_books_on_author_id", using: :btree
+
+  create_table "shares", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "book_id"
+    t.date     "sent"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "shares", ["book_id"], name: "index_shares_on_book_id", using: :btree
+  add_index "shares", ["user_id"], name: "index_shares_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -70,4 +81,6 @@ ActiveRecord::Schema.define(version: 20160410180122) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "books", "authors"
+  add_foreign_key "shares", "books"
+  add_foreign_key "shares", "users"
 end
