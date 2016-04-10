@@ -1,5 +1,6 @@
 class SharesController < ApplicationController
-  before_action :set_share, only: [:show, :edit, :update, :destroy]
+  before_action :set_share, only: [:show, :edit, :update, :destroy], :authenticate_user!
+  after_action :verify_authorized
 
   # GET /shares
   # GET /shares.json
