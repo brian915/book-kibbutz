@@ -23,6 +23,7 @@ PULL FROM YML ???
 ```ruby
 	rails generate scaffold Book title:string isbn:decimal author:references
 	rails generate scaffold Author first_name:string last_name:string middle_name:string
+	rails generate scaffold Shared user:references book:references sent:date
 ```
 
 Things you may want to cover:
