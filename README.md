@@ -20,8 +20,7 @@ Rails Composer Options :
 PULL FROM YML ???
 
 ###BOOKS:
-```rubyrails generate scaffold Book title:string isbn:decimal```
-
+```rubyrails generate scaffold Book title:string isbn:decimal author:references```
 
 Things you may want to cover:
 
