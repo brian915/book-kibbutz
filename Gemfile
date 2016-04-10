@@ -16,6 +16,7 @@ gem 'high_voltage'
 gem 'pg'
 gem 'pundit', '1.1.0'
 gem 'simple_form'
+gem 'figaro'
 
 group :development do
   gem 'better_errors'
