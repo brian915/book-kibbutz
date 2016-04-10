@@ -20,7 +20,10 @@ Rails Composer Options :
 PULL FROM YML ???
 
 ###BOOKS:
-```rubyrails generate scaffold Book title:string isbn:decimal author:references```
+```ruby
+	rails generate scaffold Book title:string isbn:decimal author:references
+	rails generate scaffold Author first_name:string last_name:string middle_name:string
+```
 
 Things you may want to cover:
 
