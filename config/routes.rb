@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :shareds
+  resources :shares
   resources :books
   resources :authors
   resources :books

@@ -1,4 +1,4 @@
-class Shared < ActiveRecord::Base
+class Share < ActiveRecord::Base
   belongs_to :user
   belongs_to :book
 end
