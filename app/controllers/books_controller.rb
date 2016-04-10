@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :set_book, only: [:show, :edit, :update, :destroy], :authenticate_user!
+  after_action :verify_authorized
 
   # GET /books
   # GET /books.json
@@ -71,4 +72,5 @@ class BooksController < ApplicationController
     def book_params
       params.require(:book).permit(:title, :isbn, :author_id)
     end
+
 end
