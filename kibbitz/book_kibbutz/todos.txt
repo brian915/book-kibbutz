@@ -1,8 +1,12 @@
 NEXT STEPS : 
-
-    ~ read pundit info
     ~ add books
     ~ add authors
+
+    ~ add featured flag
+    ~ add association between users and addresses
+    ~ add table of association "shared" for user/date sent/title
+
+    ~ read pundit info
     ~ add in administrative access
     ~ create a public/index/root page to display the book of the month
     ~ add flag for featured book(s)
@@ -27,7 +31,7 @@ NEXT STEPS :
     ~ make sure that profile pages are under robots.txt
     
   
-    
+       
 
 
 
