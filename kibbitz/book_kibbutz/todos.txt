@@ -14,12 +14,19 @@ NEXT STEPS :
     ~ test coverage for the entire app 
     
     ~ styles / Anyar
-    ~ email
+    ~ Gmail
+    ~ remember rake figaro:heroku
     ~ Google Analytics 
     ~ Twitter
     ~ Facebook Group 
     
     ~ Devise & Pundit permissions and methods 
+    
+    ~ user profiles - they can update a self summary, and upload pictures of them holding books and add links to their about me, facebook, twitter, instagram, tumblr and website 
+    
+    ~ make sure that profile pages are under robots.txt
+    
+  
     
 
 
