@@ -14,7 +14,7 @@ NEXT STEPS :
     ~ test coverage for the entire app 
     
     ~ styles / Anyar
-    ~ email
+    ~ Gmail
     ~ Google Analytics 
     ~ Twitter
     ~ Facebook Group 
