@@ -7,27 +7,33 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @books = Book.all
+    authorize Book
   end
 
   # GET /books/1
   # GET /books/1.json
   def show
+    @book = Book.find(params[:id])
+    authorize @book
   end
 
   # GET /books/new
   def new
     @book = Book.new
+    authorize @book
   end
 
   # GET /books/1/edit
   def edit
+    @book = Book.find(params[:id]
+    authorize @book
   end
 
   # POST /books
   # POST /books.json
   def create
     @book = Book.new(book_params)
-
+    authorize @book
     respond_to do |format|
       if @book.save
         format.html { redirect_to @book, notice: 'Book was successfully created.' }
@@ -42,6 +48,8 @@ class BooksController < ApplicationController
   # PATCH/PUT /books/1
   # PATCH/PUT /books/1.json
   def update
+    @book = Book.find(params[:id])
+    authorize @book
     respond_to do |format|
       if @book.update(book_params)
         format.html { redirect_to @book, notice: 'Book was successfully updated.' }
@@ -51,16 +59,19 @@ class BooksController < ApplicationController
         format.json { render json: @book.errors, status: :unprocessable_entity }
       end
     end
+    
   end
 
   # DELETE /books/1
   # DELETE /books/1.json
   def destroy
     @book.destroy
+    authorize @book
     respond_to do |format|
       format.html { redirect_to books_url, notice: 'Book was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize @book
   end
 
   private
