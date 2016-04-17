@@ -17,6 +17,7 @@ gem 'pg'
 gem 'pundit', '1.1.0'
 gem 'simple_form'
 gem 'figaro'
+gem 'omniauth', '1.3.1'
 
 group :development do
   gem 'better_errors'
